@@ -72,7 +72,8 @@ class CachedNetworkImageProvider
   }
 
   @Deprecated(
-    'load is deprecated, use loadBuffer instead, see https://docs.flutter.dev/release/breaking-changes/image-provider-load-buffer',
+    'load is deprecated, use loadBuffer instead, '
+    'see https://docs.flutter.dev/release/breaking-changes/image-provider-load-buffer',
   )
   @override
   ImageStreamCompleter load(
@@ -95,7 +96,8 @@ class CachedNetworkImageProvider
   }
 
   @Deprecated(
-    '_loadAsync is deprecated, use loadBuffer instead, see https://docs.flutter.dev/release/breaking-changes/image-provider-load-buffer',
+    '_loadAsync is deprecated, use loadBuffer instead, '
+    'see https://docs.flutter.dev/release/breaking-changes/image-provider-load-buffer',
   )
   Stream<ui.Codec> _loadAsync(
     image_provider.CachedNetworkImageProvider key,

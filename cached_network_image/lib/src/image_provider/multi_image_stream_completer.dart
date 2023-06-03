@@ -7,7 +7,7 @@ import 'package:flutter/scheduler.dart';
 
 /// Slows down animations by this factor to help in development.
 double get timeDilation => _timeDilation;
-double _timeDilation = 1.0;
+double _timeDilation = 1;
 
 /// An ImageStreamCompleter with support for loading multiple images.
 class MultiImageStreamCompleter extends ImageStreamCompleter {
@@ -61,10 +61,13 @@ class MultiImageStreamCompleter extends ImageStreamCompleter {
   final double _scale;
   final InformationCollector? _informationCollector;
   ui.FrameInfo? _nextFrame;
+
   // When the current was first shown.
   late Duration? _shownTimestamp;
+
   // The requested duration for the current frame;
   Duration? _frameDuration;
+
   // How many frames have been emitted so far.
   int _framesEmitted = 0;
   Timer? _timer;
@@ -128,7 +131,7 @@ class MultiImageStreamCompleter extends ImageStreamCompleter {
   Future<void> _decodeNextFrameAndSchedule() async {
     try {
       _nextFrame = await _codec!.getNextFrame();
-    } catch (exception, stack) {
+    } on Object catch (exception, stack) {
       reportError(
         context: ErrorDescription('resolving an image frame'),
         exception: exception,

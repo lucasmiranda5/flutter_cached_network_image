@@ -6,21 +6,23 @@ import 'package:flutter_blurhash/flutter_blurhash.dart';
 void main() {
   CachedNetworkImage.logLevel = CacheManagerLogLevel.debug;
 
-  runApp(BaseflowPluginExample(
-    pluginName: 'CachedNetworkImage',
-    githubURL: 'https://github.com/Baseflow/flutter_cache_manager',
-    pubDevURL: 'https://pub.dev/packages/flutter_cache_manager',
-    pages: [
-      BasicContent.createPage(),
-      ListContent.createPage(),
-      GridContent.createPage(),
-    ],
-  ));
+  runApp(
+    BaseflowPluginExample(
+      pluginName: 'CachedNetworkImage',
+      githubURL: 'https://github.com/Baseflow/flutter_cache_manager',
+      pubDevURL: 'https://pub.dev/packages/flutter_cache_manager',
+      pages: [
+        BasicContent.createPage(),
+        ListContent.createPage(),
+        GridContent.createPage(),
+      ],
+    ),
+  );
 }
 
 /// Demonstrates a [StatelessWidget] containing [CachedNetworkImage]
 class BasicContent extends StatelessWidget {
-  const BasicContent({Key? key}) : super(key: key);
+  const BasicContent({super.key});
 
   static ExamplePage createPage() {
     return ExamplePage(Icons.image, (context) => const BasicContent());
@@ -139,8 +141,8 @@ class BasicContent extends StatelessWidget {
 
   Widget _sizedContainer(Widget child) {
     return SizedBox(
-      width: 300.0,
-      height: 150.0,
+      width: 300,
+      height: 150,
       child: Center(child: child),
     );
   }
@@ -148,7 +150,7 @@ class BasicContent extends StatelessWidget {
 
 /// Demonstrates a [ListView] containing [CachedNetworkImage]
 class ListContent extends StatelessWidget {
-  const ListContent({Key? key}) : super(key: key);
+  const ListContent({super.key});
 
   static ExamplePage createPage() {
     return ExamplePage(Icons.list, (context) => const ListContent());
@@ -178,7 +180,7 @@ class ListContent extends StatelessWidget {
 
 /// Demonstrates a [GridView] containing [CachedNetworkImage]
 class GridContent extends StatelessWidget {
-  const GridContent({Key? key}) : super(key: key);
+  const GridContent({super.key});
 
   static ExamplePage createPage() {
     return ExamplePage(Icons.grid_on, (context) => const GridContent());

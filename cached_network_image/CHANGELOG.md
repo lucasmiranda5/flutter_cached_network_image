@@ -1,5 +1,5 @@
-## [3.2.4] - 
-* Replace error type in `LoadingErrorWidgetBuilder` from dynamic to Object
+## [3.3.0] - 2023-06-02
+* Require Dart ^3.0.0
 
 ## [3.2.3] - 2022-11-25
 * Correctly dispose image stream handler
