@@ -15,8 +15,10 @@ dependencies:
       url: https://github.com/Carapacik/flutter_cache_manager.git
       path: flutter_cache_manager
   cached_network_image_platform_interface:
-    path:
-      ../cached_network_image_platform_interface
+    git:
+      url: https://github.com/lucasmiranda5/flutter_cached_network_image.git
+      ref: dart3
+      path: cached_network_image_platform_interface
 
 dev_dependencies:
   file: '>=6.0.0 <8.0.0'
